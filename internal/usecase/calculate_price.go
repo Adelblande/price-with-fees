@@ -3,10 +3,12 @@ package usecase
 import "github.com/adelblande/price-with-fees/internal/entity"
 
 type OrderInput struct {
-	ID string
-	Price float64
-	Tax float64
+	ID string `json:"id"`
+	Price float64 `json:"price"`
+	Tax float64 `json:"tax"`
 }
+
+// {"id": "2323", "price": 23.0, "tax": 3}
 
 type OrderOutput struct {
 	ID string
